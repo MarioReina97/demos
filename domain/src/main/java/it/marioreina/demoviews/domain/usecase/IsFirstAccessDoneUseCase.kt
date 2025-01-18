@@ -6,7 +6,7 @@ import it.marioreina.demoviews.data.repository.CacheRepository
 
 class IsFirstAccessDoneUseCase(
     private val cacheRepository: CacheRepository
-): BaseAsyncUseCase<Boolean?, Unit?>() {
+): BaseAsyncUseCase<Boolean, Unit?>() {
     override suspend fun invoke(params: Unit?): Boolean {
         return cacheRepository.isFirstAccessDone()
     }

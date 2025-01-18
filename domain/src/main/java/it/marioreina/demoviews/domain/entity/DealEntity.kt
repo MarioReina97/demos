@@ -13,7 +13,7 @@ data class DealEntity(
     val lastChange: Long?,
     val metacriticLink: String?,
     val metacriticScore: String?,
-    val normalPrice: String?,
+    val normalPrice: String,
     val releaseDate: Long?,
     val salePrice: String?,
     val savings: String?,
@@ -23,7 +23,7 @@ data class DealEntity(
     val steamRatingText: String?,
     val storeID: String?,
     val thumb: String?,
-    val title: String?
+    val title: String
 ): Serializable
 
 fun MutableList<DealResponse>.toEntity(): MutableList<DealEntity> {
@@ -42,7 +42,7 @@ fun DealResponse.toEntity(): DealEntity {
         lastChange = lastChange,
         metacriticLink = metacriticLink,
         metacriticScore = metacriticScore,
-        normalPrice = normalPrice,
+        normalPrice = normalPrice ?: "",
         releaseDate = releaseDate,
         salePrice = salePrice,
         savings = savings,
@@ -52,6 +52,6 @@ fun DealResponse.toEntity(): DealEntity {
         steamRatingText = steamRatingText,
         storeID = storeID,
         thumb = thumb,
-        title = title
+        title = title ?: ""
     )
 }

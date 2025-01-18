@@ -7,8 +7,7 @@
 
     <fragment
         android:id="@+id/nav_deals"
-        android:name="it.marioreina.demoviews.deal.DealFragment"
-        tools:layout="@layout/fragment_deal" />
+        android:name="it.marioreina.demoviews.deal.DealFragment" />
 
     <fragment
         android:id="@+id/nav_wishlist"
@@ -22,6 +21,5 @@
 
     <fragment
         android:id="@+id/nav_credits"
-        android:name="it.marioreina.demoviews.credits.CreditsFragment"
-        tools:layout="@layout/fragment_credits" />
+        android:name="it.marioreina.demoviews.credits.CreditsFragment" />
 </navigation>

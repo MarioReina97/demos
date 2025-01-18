@@ -22,6 +22,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "DemoAndroidNative"
-include(":xml-views")
+include(":xml-compose")
 include(":domain")
 include(":data")
